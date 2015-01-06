@@ -5,7 +5,7 @@
 
 `cd <your-meteor-project>`
 
-`meteor add leonzhang:accounts-wechat`
+`meteor add leonzhang1109:accounts-wechat`
 
 and also add following package as pre-req -
 
