@@ -1,6 +1,6 @@
-Instagram = {};
+Wechat = {};
 
-Instagram.requestCredential = function (options, credentialRequestCompleteCallback) {
+Wechat.requestCredential = function (options, credentialRequestCompleteCallback) {
   if (!credentialRequestCompleteCallback && typeof options === 'function') {
     credentialRequestCompleteCallback = options;
     options = {};
