@@ -6,7 +6,7 @@ Template.configureLoginServiceDialogForWechat.helpers({
 
 Template.configureLoginServiceDialogForWechat.fields = function () {
   return [
-    {property: 'clientId', label: 'Client Id'},
-    {property: 'secret', label: 'Client Secret'}
+    {property: 'appId', label: 'APP Id'},
+    {property: 'secret', label: 'APP Secret'}
   ];
 };
