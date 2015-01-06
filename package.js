@@ -2,7 +2,7 @@ Package.describe({
   summary: "Instagram account login for meteor",
   "version": "0.2.0",
   "git": "https://github.com/yubozhao/meteor-accounts-instagram",
-  "name": "bozhao:accounts-instagram"
+  "name": "leonzhang:accounts-instagram"
 });
 
 Package.on_use(function(api) {
