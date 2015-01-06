@@ -3,7 +3,7 @@ if (Meteor.isClient) {
     'click button': function () {
       // increment the counter when button is clicked
       Session.set("counter", Session.get("counter") + 1);
-      Meteor.loginWithInstagram({
+      Meteor.loginWithWechat({
         loginStyle: 'popup'
         //loginStyle: 'redirect'  you can use redirect for mobile web app
       }, function () {
@@ -17,11 +17,11 @@ if (Meteor.isServer) {
   Meteor.startup(function () {
     // code to run on server at startup
     Accounts.loginServiceConfiguration.remove({
-      service: 'instagram'
+      service: 'wechat'
     });
 
     Accounts.loginServiceConfiguration.insert({
-      service: 'instagram',
+      service: 'wechat',
       clientId: 'CLIENT_ID',
       secret: 'SECRET'
     });
