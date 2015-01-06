@@ -1,8 +1,8 @@
 Package.describe({
-  summary: "Instagram account login for meteor",
+  summary: "Wechat account login for meteor",
   "version": "0.2.0",
-  "git": "https://github.com/yubozhao/meteor-accounts-instagram",
-  "name": "leonzhang:accounts-instagram"
+  "git": "https://github.com/leonzhang1109/meteor-accounts-wechat",
+  "name": "leonzhang1109:accounts-wechat"
 });
 
 Package.on_use(function(api) {
@@ -20,15 +20,15 @@ Package.on_use(function(api) {
   api.use('random', 'client');
   api.use('service-configuration', ['client', 'server']);
 
-  api.add_files('instagram_client.js', 'client');
-  api.add_files('instagram_server.js', 'server');
-  api.add_files("instagram.js");
+  api.add_files('wechat_client.js', 'client');
+  api.add_files('wechat_server.js', 'server');
+  api.add_files("wechat.js");
 
-  api.export('Instagram');
+  api.export('Wechat');
 
   api.add_files([
-    'instagram_configuration.html',
-    'instagram_configuration.js',
-    'instagram_login_button.css'
+    'wechat_configuration.html',
+    'wechat_configuration.js',
+    'wechat_login_button.css'
   ],'client');
 });
