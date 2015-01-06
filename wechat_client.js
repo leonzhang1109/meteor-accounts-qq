@@ -19,7 +19,7 @@ Wechat.requestCredential = function (options, credentialRequestCompleteCallback)
 
   var loginUrl =
     'https://open.weixin.qq.com/connect/oauth2/authorize' +
-      '?appid=' + config.clientId +
+      '?appid=' + config.appId +
       '&response_type=code' +
       '&scope=' + flatScope +
       '&redirect_uri=' + OAuth._redirectUri('wechat', config) +
