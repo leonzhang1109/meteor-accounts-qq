@@ -1,7 +1,7 @@
-Accounts.oauth.registerService('instagram');
+Accounts.oauth.registerService('wechat');
 
 if (Meteor.isClient) {
-  Meteor.loginWithInstagram = function(options, callback) {
+  Meteor.loginWithWechat = function(options, callback) {
     // support a callback without options
     if (! callback && typeof options === "function") {
       callback = options;
@@ -9,15 +9,15 @@ if (Meteor.isClient) {
     }
 
     var credentialRequestCompleteCallback = Accounts.oauth.credentialRequestCompleteHandler(callback);
-    Instagram.requestCredential(options, credentialRequestCompleteCallback);
+    Wechat.requestCredential(options, credentialRequestCompleteCallback);
   };
 } else {
   Accounts.addAutopublishFields({
-    forLoggedInUser: ['services.instagram'],
+    forLoggedInUser: ['services.wechat'],
     forOtherUsers: [
-      'services.instagram.username',
-      'services.instagram.full_name',
-      'services.instagram.profile_picture'
+      'services.wechat.username',
+      'services.wechat.full_name',
+      'services.wechat.profile_picture'
     ]
   });
 }
