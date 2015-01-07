@@ -1,12 +1,12 @@
-Template.configureLoginServiceDialogForWechat.helpers({
+Template.configureLoginServiceDialogForQQ.helpers({
   siteUrl: function () {
     return Meteor.absoluteUrl();
   }
 });
 
-Template.configureLoginServiceDialogForWechat.fields = function () {
+Template.configureLoginServiceDialogForQQ.fields = function () {
   return [
-    {property: 'appId', label: 'APP Id'},
-    {property: 'secret', label: 'APP Secret'}
+    {property: 'clientId', label: 'Client Id'},
+    {property: 'secret', label: 'Client Secret'}
   ];
 };
