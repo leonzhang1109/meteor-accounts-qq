@@ -1,11 +1,11 @@
-# Meteor Acccounts Wechat
-#### Wechat account login for meteor
+# Meteor Acccounts QQ
+#### QQ account login for meteor
 
 ##Install
 
 `cd <your-meteor-project>`
 
-`meteor add leonzhang1109:accounts-wechat`
+`meteor add leonzhang1109:accounts-qq`
 
 and also add following package as pre-req -
 
@@ -13,13 +13,13 @@ and also add following package as pre-req -
 
 
 ##Setup and Usage
-1. Register your app with Wechat Developer Site at following url- http://dev.wechat.com/
+1. Register your app with QQ Developer Site at following url- http://open.qq.com/
 
 2. Fill out the given form but make sure that redirect url as shown as follows-
 
-  OAuth redirect_uri:`<your-server-domain>:<port>/_oauth/wechat`
+  OAuth redirect_uri:`<your-server-domain>:<port>/_oauth/qq`
 
-  For e.g.redirect url for localhost : `http://localhost:3000/_oauth/wechat`
+  For e.g.redirect url for localhost : `http://localhost:3000/_oauth/qq`
 
 3. After registration, note down the AppId and AppSecret.
 4. Now in your app do create the `accounts.js` (or `acoounts.coffee` if you use coffeescript) and put following code inside
@@ -28,19 +28,19 @@ and also add following package as pre-req -
 
     ```
     ServiceConfiguration.configurations.remove({
-      service: "wechat"
+      service: "qq"
     });
     ServiceConfiguration.configurations.insert({
-      service: "wechat",
-      appId: "<your-app-id>",
+      service: "qq",
+      clientId: "<your-client-id>",
       scope:'basic',
-      secret: "<your-app-secret>"
+      secret: "<your-client-secret>"
     });
     ```
 5. Now, all things are setup, you are ready to use this package
 6. Add following button code for login
 ```
-      Meteor.loginWithWechat(function (err, res) {
+      Meteor.loginWithQQ(function (err, res) {
           if (err !== undefined)
             console.log('sucess ' + res)
           else
