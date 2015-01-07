@@ -1,8 +1,8 @@
 Package.describe({
-  summary: "Wechat account login for meteor",
+  summary: "QQ account login for meteor",
   "version": "0.2.2",
-  "git": "https://github.com/leonzhang1109/meteor-accounts-wechat",
-  "name": "leonzhang1109:accounts-wechat"
+  "git": "https://github.com/leonzhang1109/meteor-accounts-qq",
+  "name": "leonzhang1109:accounts-qq"
 });
 
 Package.on_use(function(api) {
@@ -20,15 +20,15 @@ Package.on_use(function(api) {
   api.use('random', 'client');
   api.use('service-configuration', ['client', 'server']);
 
-  api.add_files('wechat_client.js', 'client');
-  api.add_files('wechat_server.js', 'server');
-  api.add_files("wechat.js");
+  api.add_files('qq_client.js', 'client');
+  api.add_files('qq_server.js', 'server');
+  api.add_files("qq.js");
 
-  api.export('Wechat');
+  api.export('QQ');
 
   api.add_files([
-    'wechat_configuration.html',
-    'wechat_configuration.js',
-    'wechat_login_button.css'
+    'qq_configuration.html',
+    'qq_configuration.js',
+    'qq_login_button.css'
   ],'client');
 });
