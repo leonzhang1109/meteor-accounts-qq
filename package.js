@@ -1,6 +1,6 @@
 Package.describe({
   summary: "QQ account login for meteor",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "git": "https://github.com/leonzhang1109/meteor-accounts-qq",
   "name": "leonzhang1109:accounts-qq"
 });
