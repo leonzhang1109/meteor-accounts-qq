@@ -25,7 +25,7 @@ var getTokenResponse = function (query) {
 
   var response;
   try {
-    response = HTTP.post(
+    response = HTTP.get(
       "https://graph.qq.com/oauth2.0/token", {
         params: {
           code: query.code,
