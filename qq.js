@@ -1,7 +1,7 @@
 Accounts.oauth.registerService('qq');
 
 if (Meteor.isClient) {
-  Meteor.loginWithQQ = function(options, callback) {
+  Meteor.loginWithQq = function(options, callback) {
     // support a callback without options
     if (! callback && typeof options === "function") {
       callback = options;
