@@ -1,10 +1,10 @@
-Template.configureLoginServiceDialogForQQ.helpers({
+Template.configureLoginServiceDialogForQq.helpers({
   siteUrl: function () {
     return Meteor.absoluteUrl();
   }
 });
 
-Template.configureLoginServiceDialogForQQ.fields = function () {
+Template.configureLoginServiceDialogForQq.fields = function () {
   return [
     {property: 'clientId', label: 'Client Id'},
     {property: 'secret', label: 'Client Secret'}
