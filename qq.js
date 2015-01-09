@@ -9,7 +9,7 @@ if (Meteor.isClient) {
     }
 
     var credentialRequestCompleteCallback = Accounts.oauth.credentialRequestCompleteHandler(callback);
-    QQ.requestCredential(options, credentialRequestCompleteCallback);
+    Qq.requestCredential(options, credentialRequestCompleteCallback);
   };
 } else {
   Accounts.addAutopublishFields({
