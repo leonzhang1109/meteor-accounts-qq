@@ -24,7 +24,7 @@ Package.on_use(function(api) {
   api.add_files('qq_server.js', 'server');
   api.add_files("qq.js");
 
-  api.export('QQ');
+  api.export('Qq');
 
   api.add_files([
     'qq_configuration.html',
