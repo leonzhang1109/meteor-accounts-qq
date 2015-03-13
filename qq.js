@@ -14,10 +14,6 @@ if (Meteor.isClient) {
 } else {
   Accounts.addAutopublishFields({
     forLoggedInUser: ['services.qq'],
-    forOtherUsers: [
-      'services.qq.username',
-      'services.qq.full_name',
-      'services.qq.profile_picture'
-    ]
+    forOtherUsers: ['services.qq.nickname']
   });
 }

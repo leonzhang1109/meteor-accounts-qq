@@ -1,5 +1,9 @@
 Qq = {};
-
+// Request QQ credentials for the user
+// @param options {optional}
+// @param credentialRequestCompleteCallback {Function} Callback function to call on
+//   completion. Takes one argument, credentialToken on success, or Error on
+//   error.
 Qq.requestCredential = function (options, credentialRequestCompleteCallback) {
   if (!credentialRequestCompleteCallback && typeof options === 'function') {
     credentialRequestCompleteCallback = options;
@@ -14,7 +18,7 @@ Qq.requestCredential = function (options, credentialRequestCompleteCallback) {
   }
   var credentialToken = Random.secret();
   var loginStyle = OAuth._loginStyle('qq', config, options);
-  var scope = (options && options.requestPermissions) || ['basic', 'likes', 'relationships', 'comments'];
+  var scope = (options && options.requestPermissions) || ['get_user_info'];
   var flatScope = _.map(scope, encodeURIComponent).join('+');
 
   var loginUrl =

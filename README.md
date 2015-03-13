@@ -13,7 +13,7 @@ and also add following package as pre-req -
 
 
 ##Setup and Usage
-1. Register your app with QQ Developer Site at following url- http://open.qq.com/
+1. Register your app with QQ Developer Site at following url- http://connect.qq.com/
 
 2. Fill out the given form but make sure that redirect url as shown as follows-
 
@@ -33,14 +33,14 @@ and also add following package as pre-req -
     ServiceConfiguration.configurations.insert({
       service: "qq",
       clientId: "<your-client-id>",
-      scope:'basic',
+      scope:'get_user_info',
       secret: "<your-client-secret>"
     });
     ```
 5. Now, all things are setup, you are ready to use this package
 6. Add following button code for login
 ```
-      Meteor.loginWithQQ(function (err, res) {
+      Meteor.loginWithQq(function (err, res) {
           if (err !== undefined)
             console.log('sucess ' + res)
           else
